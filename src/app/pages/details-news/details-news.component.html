@@ -1,0 +1,15 @@
+<div class="news-details">
+    <div class="container">
+        <!-- breadcrumbs-->
+        <section class="breadcrumbs">
+            <app-breadcrumbs [segments]="['Home','News','News Details']"></app-breadcrumbs>
+        </section>
+        <!-- end breadcrumbs -->
+        <app-title [title]='News'></app-title>
+        <ng-container *ngFor="let details of NewsDetails">
+            <app-details [details]='details'></app-details>
+        </ng-container>
+        <!--Related-topics I didn't complete it -->
+        <app-related-topics></app-related-topics>
+    </div>
+</div>

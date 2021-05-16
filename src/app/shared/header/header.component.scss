@@ -1,0 +1,44 @@
+@import "./../../../styles.scss";
+
+.bg-navbar {
+  background-color: $firstColor;
+
+  .toggleIcon {
+    display: none;
+    width: 28px !important;
+    margin: 10px;
+  }
+
+  ul {
+    margin: 0px;
+    padding: 0px;
+
+    li {
+      list-style: none;
+      padding: 13px 20px;
+
+      img {
+        width: 1.2rem;
+
+        &.profile {
+          width: 1.7rem;
+        }
+      }
+
+      span {
+        padding-left: 5px;
+        color: white;
+      }
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .toggleIcon {
+      display: initial;
+    }
+
+    .items {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,110 @@
+.bg-image {
+  background-image: url('../../../../../assets/images/help.png');
+  position: relative;
+  padding: 3rem 0px;
+  height: 650px;
+
+  .layer {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #00000087;
+    top: 0px;
+    height: 100%;
+
+    .title {
+      margin-top: 7rem !important;
+
+      h2,
+      p {
+        color: white;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 3rem;
+        text-transform: capitalize;
+      }
+
+      p {
+        font-size: 1.7rem;
+        margin: 27px 0px 5rem 0px;
+        font-weight: 100;
+      }
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    li {
+      margin-top: 5rem;
+      list-style: none;
+      width: 150px;
+      height: 150px;
+      border: 2px solid white;
+      transform: rotate(45deg);
+      margin: 0px 2.2rem;
+      transition: .5s;
+
+      .content {
+        transform: rotate(-45deg);
+        text-align: center;
+        color: white;
+        padding: 13px;
+        font-weight: 900;
+
+        p {
+          margin-top: 10px;
+        }
+
+        img {
+          width: 44%;
+          margin: auto;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width:768px) {
+  .bg-image {
+    height: 97rem;
+
+    .title {
+      h2 {
+        font-size: 2rem !important;
+      }
+
+      p {
+        font-size: 14px !important;
+      }
+    }
+
+    ul {
+      display: block !important;
+
+      li {
+        transform: rotate(0deg) !important;
+        width: auto !important;
+        margin: 0px !important;
+        margin-bottom: 10px !important;
+
+        .content {
+          transform: rotate(0deg) !important;
+
+          img {
+            width: 20% !important;
+          }
+        }
+      }
+    }
+
+  }
+}

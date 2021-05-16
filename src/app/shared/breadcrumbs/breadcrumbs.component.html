@@ -1,0 +1,11 @@
+<ul [class.bg]="bg" class="breadcrumbs">
+    <li *ngFor="let bcItem of segments;
+     let $index = index; let $last = last" title="{{ bcItem}}">
+        <a *ngIf="!$last" [routerLink]="['/']" [ngClass]="{'active': $last}" class="home-route"
+            style="cursor: pointer;">
+            <span>{{bcItem}}</span>
+        </a>
+        <span class="separator" *ngIf="$index < segments.length - 1">&nbsp; &nbsp; / &nbsp; &nbsp;</span>
+        <span *ngIf="$last" class="active">{{ bcItem}}</span>
+    </li>
+</ul>

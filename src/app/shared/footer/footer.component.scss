@@ -1,0 +1,61 @@
+@import './../../../styles.scss';
+
+.bg-footer {
+  background-color: #D9D9D9;
+  padding: 1.5rem 0px;
+
+  button,
+  input {
+    background: #c1c1c1;
+    overflow: visible;
+    padding: 10px 25px 10px 7px;
+    border: none;
+    border-radius: 4px;
+  }
+
+  input {
+    width: 70%;
+  }
+
+  button {
+    background-color: $secondColor;
+    color: white;
+  }
+
+  input,
+  button {
+    border-radius: 0px !important;
+
+  }
+
+  ul {
+    margin: 0px;
+    padding: 0px;
+
+    li {
+      list-style: none;
+      padding: 4px 0px;
+    }
+  }
+
+  .social-media {
+    img {
+      padding: 0px 10px;
+      width: 2.3rem;
+
+      &.facebook {
+        width: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+
+  input,
+  button {
+    margin-bottom: 10px;
+    width: 100% !important;
+    display: block;
+  }
+}

@@ -1,0 +1,50 @@
+<div class="list-of-news">
+    <div class="container">
+        <!-- breadcrumbs-->
+        <section class="breadcrumbs">
+            <app-breadcrumbs [segments]="['Home','News']"></app-breadcrumbs>
+        </section>
+        <!-- end breadcrumbs -->
+        <app-title [title]='News'></app-title>
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <label>From</label>
+                    <app-date-picker></app-date-picker>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <label>TO</label>
+                    <app-date-picker></app-date-picker>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="form-group">
+                    <label>Category</label>
+                    <select class="form-control" (change)="Filter($event.target.value)">
+                        <option *ngFor="let Category of sourceCategory" [value]="Category.id">
+                            {{Category.name}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="form-group">
+                    <label>Search</label>
+                    <div class="form-inline">
+                        <input class="form-control search" placeholder="Search" [(ngModel)]="searchText">
+                        <button class="btn">
+                            <img src="assets/images/search.png">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <p class="sort">Sort By<img src="assets/images/sort.png" class="pl-1"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-list [NewsApiData]="NewsApiData" [DataFilter]="DataFilter" [searchText]="searchText"></app-list>

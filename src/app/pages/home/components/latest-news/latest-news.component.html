@@ -1,0 +1,20 @@
+<div class="latest-news">
+    <div class="container">
+        <div class="row mt-4 title">
+            <div class="col-lg-10">
+                <h2>Latest News</h2>
+            </div>
+            <div class="col-lg-2 text-right">
+                <a routerLink="listOfNews">
+                    View All
+                    <img src="assets/images/arrow-view.png">
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5" *ngFor="let NEWS of NewsApiData | slice:0:6">
+                <ng-contanier>
+                    <app-cards-list [CardsList]="NEWS"></app-cards-list>
+                </ng-contanier>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+@import "./../../../../../styles.scss";
+
+.latest-news {
+  .title {
+    h2 {
+      font-size: 29px !IMPORTANT;
+      font-weight: 800 !IMPORTANT;
+    }
+
+    a {
+      color: $secondColor;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    h2 {
+      text-align: center !important;
+    }
+
+    a {
+      text-align: center;
+      display: block;
+      margin-bottom: 7px;
+    }
+
+  }
+}

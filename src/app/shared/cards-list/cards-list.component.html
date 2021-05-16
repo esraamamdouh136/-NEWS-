@@ -1,0 +1,21 @@
+<a [routerLink]="['/details-news', CardsList.id]"
+    (click)="DetailsNews(CardsList.id , CardsList.title , CardsList.content , CardsList.urlToImage)">
+    <div class="card">
+        <img class="card-img-top" [src]="CardsList.urlToImage" onError="this.src='assets/on-image.jpg'">
+        <div class="card-body">
+            <div class="icons">
+                <img src="assets/images/favorite.png">
+                <img src="assets/images/share.png">
+            </div>
+            <h5 class="card-title">{{ (CardsList.title.length > 50) ? (CardsList.title | slice:0:70) + '....' :
+                CardsList.title }}
+            </h5>
+            <span class="News">News</span>
+            <p class="card-text mt-2">{{getDescription(CardsList.description)}}</p>
+            <div class="date">
+                <img src="assets/images/date_range.png">
+                <span>{{CardsList.publishedAt | date : 'fullDate'}}</span>
+            </div>
+        </div>
+    </div>
+</a>

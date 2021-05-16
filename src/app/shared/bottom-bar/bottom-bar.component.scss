@@ -1,0 +1,11 @@
+@import './../../../styles.scss';
+
+.bottom-bar {
+  background-color: $firstColor;
+
+  p {
+    color: white;
+    padding: 4px 0px;
+    margin: 0px;
+  }
+}
